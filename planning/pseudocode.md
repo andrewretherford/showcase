@@ -1,14 +1,14 @@
 # MVP
 
 ## App
-- [ ] Call Header
+- [x] Call Header
 - [ ] Create searchString state
 - [ ] Set up routes for ShowResults, ShowDetails, Episodes, EpisodeDetail, Cast, CastMemberDetail
 
 ## Header
  - [ ] Receive setSearchString in props?
- - [ ] Add title
- - [ ] Create link for home page
+ - [x] Add title
+ - [x] Create link for home page
  - [ ] Create input state variable
  - [ ] Create search form with controlled input
  - [ ] Create change handler to update input state

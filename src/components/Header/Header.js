@@ -1,8 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
 const Header = () => {
+    const [searchString, setSearchString] = useState('')
+    const navigate = useNavigate()
+
+    function changeHandler(e) {
+        setSearchString(e.target.value)
+    }
+
+    function submitHandler(e) {
+        e.preventDefault()
+        navigate(`/results/${searchString}`)
+        setSearchString('')
+    }
+
     return (
         <header className='d-flex align-items-center justify-content-between'
             style={{
@@ -19,14 +32,16 @@ const Header = () => {
             >
                 <h1>Showcase</h1>
             </Link>
-            <Form>
-                <Form.Group md={3} >
+            <Form onSubmit={submitHandler}>
+                <Form.Group controlId='searchInput' >
                     <Row>
                         <Col className='gx-2'>
                             <Form.Control 
                                 type='text'
                                 placeholder='Search for shows'
                                 style={{height: '2.5em'}}
+                                onChange={changeHandler}
+                                value={searchString}
                             />
                         </Col>
                         <Col className='gx-2'>
@@ -34,7 +49,6 @@ const Header = () => {
                                 variant='light' 
                                 type='submit'
                                 style={{ height: '2.5em' }}
-                                // className='ms-2 me-5'
                             >Submit</Button>
                         </Col>
                     </Row>

@@ -7,17 +7,17 @@ import EpisodeDetails from './components/EpisodeDetails/EpisodeDetails';
 import CastMemberDetails from './components/CastMemberDetails/CastMemberDetails';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import { useState } from 'react';
+
 
 function App() {
-  const [searchString, setSearchString] = useState('')
+  
 
   return (
     <Container fluid='xs'>
         <Header />
         <main>
           <Routes>
-            <Route path="/results" element={<ShowResults />} />
+            <Route path="/results/:searchQuery" element={<ShowResults />} />
             <Route path="/show-details" element={<ShowDetails />} />
             <Route path="/episodes" element={<Episodes />} />
             <Route path="/episode-details" element={<EpisodeDetails />} />
