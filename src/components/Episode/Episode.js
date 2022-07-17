@@ -1,6 +1,6 @@
-import { Carousel } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FunctionContext } from '../../App'
 
 const Episode = ({ episode }) => {
@@ -12,22 +12,24 @@ const Episode = ({ episode }) => {
     }
 
     return (
-        <Carousel.Item {...props}>
-            {episode.image ? <img
-                className="d-block w-100"
-                src={episode.image.original}
-                alt={episode.name}
-            />
+        <Card className='showCard'>
+            {episode.image ?
+                <Card.Img variant='top' src={episode.image.medium} className='cardImg'/>
                 : <p>No Image</p>
             }
-            <Carousel.Caption>
-                <h3>{episode.name}</h3>
-                {episode.summary ? 
-                    <p>{stripHtml(episode.summary)}</p>
-                    : <p>No Summary</p>
-                }
-            </Carousel.Caption>
-        </Carousel.Item>
+            <Card.Body>                  
+                    <Card.Title>{episode.name}</Card.Title>
+                    {episode.summary ? (episode.summary.length > 200 ? 
+                        <Card.Text style={{ textAlign: 'justify' }}>{stripHtml(episode.summary.slice(0,200)) + '...'}</Card.Text>
+                        : <Card.Text style={{ textAlign: 'justify' }}>{stripHtml(episode.summary)}</Card.Text>)
+                        : <p>No Summary</p>
+                    }               
+                    <Link 
+                        to={`/episode-details/${episode.id}`}
+                        style={{ textDecoration: 'none' }}
+                    >Details</Link>
+            </Card.Body>
+        </Card>
     );
 };
 

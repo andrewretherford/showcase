@@ -35,6 +35,7 @@ function App() {
         <main>
           <FunctionContext.Provider value={stripHtml}>
             <Routes>
+              <Route path="/" element={<ShowResults />} />
               <Route path="/results/:query" element={<ShowResults />} />
               <Route path="/show-details/:showId" element={<ShowDetails />} />
               <Route path="/episodes/*" element={<Episodes />} />
