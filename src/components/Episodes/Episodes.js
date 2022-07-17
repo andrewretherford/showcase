@@ -28,14 +28,7 @@ const Episodes = () => {
                 return(
                     <Row key={index} xs={1} md={2} lg={3} xl={4} className='g-4'>
                         <h2>Season {index + 1}</h2>
-                        {episodeDetails.map(episode => {
-                            if(episode.season === index + 1) {
-                                console.log(episode.season)
-                                return(
-                                    <Episode key={episode.id} episode={episode} />
-                                )
-                            }
-                        })}
+                        {episodeDetails.filter(episode => episode.season === index + 1).map(episode => <Episode key={episode.id} episode={episode} />)}
                     </Row>
                 )
             })}
