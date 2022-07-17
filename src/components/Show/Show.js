@@ -1,6 +1,6 @@
 import './Show.css'
 import { useContext } from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FunctionContext } from '../../App';
 

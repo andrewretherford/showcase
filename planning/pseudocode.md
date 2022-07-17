@@ -30,7 +30,7 @@
  - [x] Add link to Cast
  
 ## Episodes
- - [ ] Get showId with useSearchParams
+ - [x] Get showId with useSearchParams
  - [ ] Create useEffect function with a fetch to retrieve all episodes
  - [ ] Map over the response to call Episode for each element and pass episodeInfo as a prop
 

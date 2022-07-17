@@ -37,8 +37,8 @@ function App() {
             <Routes>
               <Route path="/results/:query" element={<ShowResults />} />
               <Route path="/show-details/:showId" element={<ShowDetails />} />
-              <Route path="/episodes" element={<Episodes />} />
-              <Route path="/episode-details" element={<EpisodeDetails />} />
+              <Route path="/episodes/*" element={<Episodes />} />
+              <Route path="/episode-details/:episodeID" element={<EpisodeDetails />} />
               <Route path="/cast" element={<Cast />} />
               <Route path="/cast-member-details" element={<CastMemberDetails />} />
             </Routes>
