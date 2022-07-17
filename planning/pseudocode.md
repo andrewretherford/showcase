@@ -25,9 +25,9 @@
 ## ShowDetails
  - [x] Get showID with useParams
  - [ ] Create useEffect function with a fetch to retrieve show details
- - [ ] Display full info for the show
- - [ ] Add link to Episodes
- - [ ] Add link to Cast
+ - [x] Display full info for the show
+ - [x] Add link to Episodes
+ - [x] Add link to Cast
  
 ## Episodes
  - [ ] Get showId with useSearchParams
