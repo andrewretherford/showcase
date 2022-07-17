@@ -2,30 +2,28 @@
 
 ## App
 - [x] Call Header
-- [ ] Create searchString state
-- [ ] Set up routes for ShowResults, ShowDetails, Episodes, EpisodeDetail, Cast, CastMemberDetail
+- [x] Set up routes for ShowResults, ShowDetails, Episodes, EpisodeDetail, Cast, CastMemberDetail
 
 ## Header
- - [ ] Receive setSearchString in props?
  - [x] Add title
  - [x] Create link for home page
- - [ ] Create input state variable
- - [ ] Create search form with controlled input
- - [ ] Create change handler to update input state
- - [ ] Create submit handler to store input in searchString state OR use Navigate to take user to /results/:searchString
+ - [x] Create searchString state variable
+ - [x] Create search form with controlled input
+ - [x] Create change handler to update input state
+ - [x] Create submit handler to store input in searchString state OR use Navigate to take user to /results/:searchString
  
  ## ShowResults
- - [ ] Receive searchString in props
+ - [ ] Receive searchString in props?
  - [ ] Create useEffect function with a fetch for shows based on searchString
- - [ ] Map over the response to call Show for each element and pass showInfo as a prop
+ - [x] Map over the response to call Show for each element and pass showInfo as a prop
 
  ## Show
- - [ ] Receive showInfo in props
- - [ ] Display show name, thumbnail, and synopsis
- - [ ] Add link to ShowDetails with showID as a search parameter
+ - [x] Receive showInfo in props
+ - [x] Display show name, thumbnail, and synopsis
+ - [x] Add link to ShowDetails with showID as a search parameter
 
 ## ShowDetails
- - [ ] Get showID with useSearchParams
+ - [x] Get showID with useParams
  - [ ] Create useEffect function with a fetch to retrieve show details
  - [ ] Display full info for the show
  - [ ] Add link to Episodes

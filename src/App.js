@@ -7,23 +7,42 @@ import EpisodeDetails from './components/EpisodeDetails/EpisodeDetails';
 import CastMemberDetails from './components/CastMemberDetails/CastMemberDetails';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { createContext } from 'react';
 
+export const FunctionContext = createContext()
 
 function App() {
-  
+
+  function stripHtml(string) {
+    let stringArray = [...string]
+    for(let i=0; i < stringArray.length; i++) {
+        if(stringArray[i] === '<') {
+            if(stringArray[i+1] === '/') {
+                stringArray.splice(i, 4)
+            } else {
+                stringArray.splice(i, 3)
+            }
+        }
+    }
+    const strippedString = stringArray.join('')
+
+    return strippedString
+  }
 
   return (
     <Container fluid='xs'>
         <Header />
         <main>
-          <Routes>
-            <Route path="/results/:searchQuery" element={<ShowResults />} />
-            <Route path="/show-details" element={<ShowDetails />} />
-            <Route path="/episodes" element={<Episodes />} />
-            <Route path="/episode-details" element={<EpisodeDetails />} />
-            <Route path="/cast" element={<Cast />} />
-            <Route path="/cast-member-details" element={<CastMemberDetails />} />
-          </Routes>
+          <FunctionContext.Provider value={stripHtml}>
+            <Routes>
+              <Route path="/results/:query" element={<ShowResults />} />
+              <Route path="/show-details/:showId" element={<ShowDetails />} />
+              <Route path="/episodes" element={<Episodes />} />
+              <Route path="/episode-details" element={<EpisodeDetails />} />
+              <Route path="/cast" element={<Cast />} />
+              <Route path="/cast-member-details" element={<CastMemberDetails />} />
+            </Routes>
+          </FunctionContext.Provider>
         </main>
     </Container>
   );

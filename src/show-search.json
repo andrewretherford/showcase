@@ -1,0 +1,597 @@
+[
+    {
+        "score": 0.70129347,
+        "show": {
+            "id": 663,
+            "url": "https://www.tvmaze.com/shows/663/the-shield",
+            "name": "The Shield",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Drama",
+                "Crime"
+            ],
+            "status": "Ended",
+            "runtime": 60,
+            "averageRuntime": 61,
+            "premiered": "2002-03-12",
+            "ended": "2008-11-25",
+            "officialSite": null,
+            "schedule": {
+                "time": "22:00",
+                "days": [
+                    "Tuesday"
+                ]
+            },
+            "rating": {
+                "average": 8.7
+            },
+            "weight": 97,
+            "network": {
+                "id": 13,
+                "name": "FX",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": null
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": 6185,
+                "thetvdb": 78261,
+                "imdb": "tt0286486"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/55/138892.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/55/138892.jpg"
+            },
+            "summary": "<p>Detective Vic Mackey is the leader of an elite Strike Team unit, a group of cops effective at eliminating crime but also operating under Vic's own set of rules. But his rules sometimes cross the fine line between legal and illegal. Now the precinct has a new captain who doesn't like Vic's tactics and wants to bust him off the force - even as the captain finds himself going to Vic for help whenever the going gets rough.</p>",
+            "updated": 1656804424,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/663"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/58458"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.55508196,
+        "show": {
+            "id": 31,
+            "url": "https://www.tvmaze.com/shows/31/marvels-agents-of-shield",
+            "name": "Marvel's Agents of S.H.I.E.L.D.",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Action",
+                "Adventure",
+                "Science-Fiction"
+            ],
+            "status": "Ended",
+            "runtime": 60,
+            "averageRuntime": 60,
+            "premiered": "2013-09-24",
+            "ended": "2020-08-12",
+            "officialSite": "http://abc.go.com/shows/marvels-agents-of-shield",
+            "schedule": {
+                "time": "22:00",
+                "days": [
+                    "Wednesday"
+                ]
+            },
+            "rating": {
+                "average": 8
+            },
+            "weight": 98,
+            "network": {
+                "id": 3,
+                "name": "ABC",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": "https://abc.com/"
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": 32656,
+                "thetvdb": 263365,
+                "imdb": "tt2364582"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/142/356776.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/142/356776.jpg"
+            },
+            "summary": "<p>Phil Coulson heads an elite team of fellow agents with the worldwide law-enforcement organization known as S.H.I.E.L.D. (Strategic Homeland Intervention Enforcement and Logistics Division), as they investigate strange occurrences around the globe. Its members -- each of whom brings a specialty to the group -- work with Coulson to protect those who cannot protect themselves from extraordinary and inconceivable threats.</p>",
+            "updated": 1653922608,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/31"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/1839340"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.5048108,
+        "show": {
+            "id": 16281,
+            "url": "https://www.tvmaze.com/shows/16281/marvels-agents-of-shield-academy",
+            "name": "Marvel's Agents of S.H.I.E.L.D.: Academy",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [],
+            "status": "Ended",
+            "runtime": 5,
+            "averageRuntime": 5,
+            "premiered": "2016-03-09",
+            "ended": "2016-05-04",
+            "officialSite": null,
+            "schedule": {
+                "time": "",
+                "days": [
+                    "Wednesday"
+                ]
+            },
+            "rating": {
+                "average": 6
+            },
+            "weight": 72,
+            "network": null,
+            "webChannel": {
+                "id": 95,
+                "name": "ABC.com",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": null
+            },
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": null,
+                "imdb": null
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/54/135729.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/54/135729.jpg"
+            },
+            "summary": "<p>ABC Entertainment and Marvel Television test the physical and mental limits of three super-fans as they compete for the adventure of a lifetime in this new five-part digital original series, <b>Marvel's Agents of S.H.I.E.L.D.: Academy</b>.</p>",
+            "updated": 1653922858,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/16281"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/741268"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.48765904,
+        "show": {
+            "id": 40140,
+            "url": "https://www.tvmaze.com/shows/40140/the-rising-of-the-shield-hero",
+            "name": "The Rising of the Shield Hero",
+            "type": "Animation",
+            "language": "Japanese",
+            "genres": [
+                "Action",
+                "Adventure",
+                "Anime",
+                "Fantasy"
+            ],
+            "status": "Running",
+            "runtime": 30,
+            "averageRuntime": 31,
+            "premiered": "2019-01-02",
+            "ended": null,
+            "officialSite": "http://shieldhero-anime.jp/",
+            "schedule": {
+                "time": "22:00",
+                "days": [
+                    "Wednesday"
+                ]
+            },
+            "rating": {
+                "average": 7.5
+            },
+            "weight": 92,
+            "network": {
+                "id": 167,
+                "name": "AT-X",
+                "country": {
+                    "name": "Japan",
+                    "code": "JP",
+                    "timezone": "Asia/Tokyo"
+                },
+                "officialSite": null
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 353712,
+                "imdb": null
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/177/444838.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/177/444838.jpg"
+            },
+            "summary": "<p>Iwatani Naofumi, a run-of-the-mill otaku, finds a book in the library that summons him to another world. He is tasked with joining the sword, spear, and bow as one of the Four Cardinal Heroes and fighting the Waves of Catastrophe as the Shield Hero. Excited by the prospect of a grand adventure, Naofumi sets off with his party. However, merely a few days later, he is betrayed and loses all his money, dignity, and respect. Unable to trust anyone anymore, he employs a slave named Raphtalia and takes on the Waves and the world. But will he really find a way to overturn this desperate situation?</p>",
+            "updated": 1656509230,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/40140"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/2298562"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.4853553,
+        "show": {
+            "id": 23460,
+            "url": "https://www.tvmaze.com/shows/23460/marvels-agents-of-shield-slingshot",
+            "name": "Marvel's Agents of S.H.I.E.L.D.: Slingshot",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Action",
+                "Science-Fiction"
+            ],
+            "status": "Ended",
+            "runtime": null,
+            "averageRuntime": 5,
+            "premiered": "2016-12-13",
+            "ended": "2016-12-13",
+            "officialSite": "http://abc.go.com/shows/marvels-agents-of-shield-slingshot",
+            "schedule": {
+                "time": "",
+                "days": [
+                    "Tuesday"
+                ]
+            },
+            "rating": {
+                "average": 7.1
+            },
+            "weight": 49,
+            "network": null,
+            "webChannel": {
+                "id": 95,
+                "name": "ABC.com",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": null
+            },
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 320925,
+                "imdb": "tt6313900"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/89/222865.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/89/222865.jpg"
+            },
+            "summary": "<p><b>Marvel's Agents of S.H.I.E.L.D.: Slingshot</b> is set in the world of the hit television series <i>Marvel's Agents of S.H.I.E.L.D.</i> Taking place shortly before the beginning of Season 4, this digital series features the character of Elena \"Yo-Yo\" Rodriguez, an Inhuman with the ability to move with super-speed. As a person with powers, she must sign the recently instituted Sokovia Accords, the worldwide agreement that regulates and tracks those with super powers. However, the restrictions of the Accords are in direct conflict with a personal mission she's desperate to fulfill, a mission that will test her abilities, her allegiances, and will include some tense encounters with our most popular S.H.I.E.L.D. team members.</p>",
+            "updated": 1653922927,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/23460"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/1014343"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.47180498,
+        "show": {
+            "id": 16280,
+            "url": "https://www.tvmaze.com/shows/16280/marvels-agents-of-shield-double-agent",
+            "name": "Marvel's Agents of S.H.I.E.L.D.: Double Agent",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [],
+            "status": "Ended",
+            "runtime": 5,
+            "averageRuntime": 5,
+            "premiered": "2015-03-04",
+            "ended": "2015-05-06",
+            "officialSite": null,
+            "schedule": {
+                "time": "",
+                "days": [
+                    "Wednesday"
+                ]
+            },
+            "rating": {
+                "average": 6.8
+            },
+            "weight": 65,
+            "network": null,
+            "webChannel": {
+                "id": 95,
+                "name": "ABC.com",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": null
+            },
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": null,
+                "imdb": "tt4501242"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/89/222843.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/89/222843.jpg"
+            },
+            "summary": "<p>There is a double agent on the set of Marvel's Agents of S.H.I.E.L.D. Reporting to a shadowy Mastermind, he evades security and gathers classified information for the legions of fans who are eager for the next exciting bit of Marvel news.</p>",
+            "updated": 1653922713,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/16280"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/741258"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.42078066,
+        "show": {
+            "id": 59290,
+            "url": "https://www.tvmaze.com/shows/59290/shield-of-tomorrow",
+            "name": "Shield of Tomorrow",
+            "type": "Reality",
+            "language": "English",
+            "genres": [],
+            "status": "Ended",
+            "runtime": 120,
+            "averageRuntime": 120,
+            "premiered": "2017-07-05",
+            "ended": "2018-07-13",
+            "officialSite": "https://geekandsundry.com/shows/shield-of-tomorrow/",
+            "schedule": {
+                "time": "",
+                "days": [
+                    "Friday"
+                ]
+            },
+            "rating": {
+                "average": null
+            },
+            "weight": 1,
+            "network": null,
+            "webChannel": {
+                "id": 21,
+                "name": "YouTube",
+                "country": null,
+                "officialSite": "https://www.youtube.com"
+            },
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 336914,
+                "imdb": "tt7142196"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/380/950498.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/380/950498.jpg"
+            },
+            "summary": "<p>The Federation is on the brink of war with the Dominion. In the shadow of this cold war, the crew members of the USS Sally Ride must work together to not only protect the Federation, but protect it's soul as well. An epic story from the Star Trek universe that you know and love.</p>",
+            "updated": 1643421852,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/59290"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/2229402"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.4154645,
+        "show": {
+            "id": 57781,
+            "url": "https://www.tvmaze.com/shows/57781/kgb-the-sword-and-the-shield",
+            "name": "KGB: The Sword and the Shield",
+            "type": "Scripted",
+            "language": null,
+            "genres": [],
+            "status": "Ended",
+            "runtime": 52,
+            "averageRuntime": 52,
+            "premiered": "2019-04-09",
+            "ended": "2019-04-09",
+            "officialSite": null,
+            "schedule": {
+                "time": "",
+                "days": []
+            },
+            "rating": {
+                "average": null
+            },
+            "weight": 24,
+            "network": {
+                "id": 415,
+                "name": "ARTE",
+                "country": {
+                    "name": "Germany",
+                    "code": "DE",
+                    "timezone": "Europe/Busingen"
+                },
+                "officialSite": null
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 362381,
+                "imdb": "tt10153514"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/359/898089.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/359/898089.jpg"
+            },
+            "summary": "<p>The KGB has influenced world events on numerous occasions before. Assassinations, coup d'états, theft of nuclear secrets and sexpionage are just standard trademarks for an organisation that still sends shivers down the spines of politicians and military figures the world over. It may have changed its name on various occasions, from Cheka to SPD to OGPU to NKVD to MGB to KGB to an array of different names after the collapse of the Soviet Union to FSB and SVR today, but it will forever be known, internally and externally, as the KGB.</p>",
+            "updated": 1648137035,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/57781"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/2176749"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.31955943,
+        "show": {
+            "id": 13651,
+            "url": "https://www.tvmaze.com/shows/13651/child-genius",
+            "name": "Child Genius",
+            "type": "Documentary",
+            "language": "English",
+            "genres": [],
+            "status": "To Be Determined",
+            "runtime": 60,
+            "averageRuntime": 60,
+            "premiered": "2007-02-08",
+            "ended": null,
+            "officialSite": "http://www.channel4.com/programmes/child-genius",
+            "schedule": {
+                "time": "20:00",
+                "days": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ]
+            },
+            "rating": {
+                "average": null
+            },
+            "weight": 50,
+            "network": {
+                "id": 45,
+                "name": "Channel 4",
+                "country": {
+                    "name": "United Kingdom",
+                    "code": "GB",
+                    "timezone": "Europe/London"
+                },
+                "officialSite": "https://www.channel4.com/"
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 270830,
+                "imdb": "tt1248244"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/322/805287.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/322/805287.jpg"
+            },
+            "summary": "<p>Series following the smartest children from across the UK and their families.</p>",
+            "updated": 1637785701,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/13651"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/1616709"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.31689656,
+        "show": {
+            "id": 2164,
+            "url": "https://www.tvmaze.com/shows/2164/love-child",
+            "name": "Love Child",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Drama"
+            ],
+            "status": "Ended",
+            "runtime": 60,
+            "averageRuntime": 60,
+            "premiered": "2014-02-17",
+            "ended": "2017-07-04",
+            "officialSite": "https://www.9now.com.au/love-child",
+            "schedule": {
+                "time": "20:40",
+                "days": [
+                    "Tuesday"
+                ]
+            },
+            "rating": {
+                "average": 7.9
+            },
+            "weight": 47,
+            "network": {
+                "id": 120,
+                "name": "Nine Network",
+                "country": {
+                    "name": "Australia",
+                    "code": "AU",
+                    "timezone": "Australia/Sydney"
+                },
+                "officialSite": null
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": 36974,
+                "thetvdb": 277528,
+                "imdb": "tt2832756"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/12/30248.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/12/30248.jpg"
+            },
+            "summary": "<p>It's 1969 in Kings Cross and Joan Miller, a smart and sophisticated midwife, returns home from London to take a job at the Kings Cross Hospital and find a new life for herself, at a time when Australia is coming of age and the new generation believes anything is possible.</p><p>Dr Patrick McNaughton is the head of obstetrics at Kings Cross Hospital, and Frances Bolton is the tough matron who also controls the running of Stanton House, a home for unwed pregnant young women.</p><p>Their lives intersect between Kings Cross Hospital, Stanton House and the wild streets of Darlinghurst beyond the hospital walls.</p><p>A powerful and uplifting series, <b>Love Child</b> tells the stories of young women and men fighting an unjust system in a world on the brink of change.</p>",
+            "updated": 1643494147,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/2164"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/1162723"
+                }
+            }
+        }
+    }
+]
