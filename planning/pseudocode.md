@@ -2,7 +2,10 @@
 
 ## App
 - [x] Call Header
-- [x] Set up routes for ShowResults, ShowDetails, Episodes, EpisodeDetail, Cast, CastMemberDetail
+- [x] Set up routes for Home, ShowResults, ShowDetails, Episodes, EpisodeDetail, Cast
+
+## Home
+- [ ] Create landing page content
 
 ## Header
  - [x] Add title
@@ -52,12 +55,7 @@
 ## CastMember
  - [x] Receive castInfo in props
  - [ ] Display cast member name, thumbnail, and character name
- - [ ] Add link to CastMemberDetails with castMemberID as a search parameter
-
-## CastMemberDetails
- - [ ] Get castMemberID with useSearchParams
- - [ ] Create useEffect function with a fetch to retrieve details for the cast member
- - [ ] Display full info for the cast member
+ - [x] Add link to CastMemberDetails with castMemberID as a search parameter
 
 # Stretch Goals
  - [ ] Test bookmarking results in browser

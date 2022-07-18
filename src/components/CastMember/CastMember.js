@@ -28,13 +28,18 @@ const CastMember = ({ castMemberInfo }) => {
                 <Col>
                     <hr/>
                     <div className='d-flex flex-column align-items-center'>
-                        <h2>{castMemberInfo.person.name}</h2>
+                        <h3>{castMemberInfo.person.name}</h3>
                         <p>{castMemberInfo.type}</p>
-                        <Link 
-                            to={`/cast-member-details/${castMemberInfo.person.id}`}
+                        {castMemberInfo.person.country ? 
+                            <p>{castMemberInfo.person.country.name}</p>
+                            : <p>No country listed</p>
+                        }
+                        <a href=""></a>
+                        <a 
+                            href={castMemberInfo.person.url}
                             style={{ textDecoration: 'none' }}
                             className='mb-2'
-                        >Details</Link>
+                        >tvmaze profile</a>
                     </div>
                 </Col>
             </Row>

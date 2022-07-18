@@ -43,7 +43,6 @@ function App() {
               <Route path="episodes/*" element={<Episodes />} />
               <Route path="episode-details/:episodeID" element={<EpisodeDetails />} />
               <Route path="cast" element={<Cast />} />
-              <Route path="cast-member-details" element={<CastMemberDetails />} />
             </Routes>
           </FunctionContext.Provider>
         </main>
