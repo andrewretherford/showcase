@@ -42,15 +42,15 @@
 ## EpisodeDetails
  - [ ] Get episodeID with useSearchParams
  - [ ] Create useEffect function with a fetch to retrieve episode details
- - [ ] Display full info for the episode
+ - [x] Display full info for the episode
 
 ## Cast
  - [ ] Get showId with useSearchParams
  - [ ] Create useEffect function with a fetch to retrieve the cast data
- - [ ] Map over the response to call CastMember for each element and pass castInfo as a prop
+ - [x] Map over the response to call CastMember for each element and pass castInfo as a prop
 
 ## CastMember
- - [ ] Receive castInfo in props
+ - [x] Receive castInfo in props
  - [ ] Display cast member name, thumbnail, and character name
  - [ ] Add link to CastMemberDetails with castMemberID as a search parameter
 

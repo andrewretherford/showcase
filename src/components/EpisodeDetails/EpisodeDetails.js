@@ -6,12 +6,12 @@ import { FunctionContext } from '../../App';
 const EpisodeDetails = () => {
     const episodeDetails = data
     const stripHtml = useContext(FunctionContext)
-    console.log(episodeDetails)
+
     return (
         <Container className='mt-5 mb-5' style={{background: 'rgb(230,230,230', padding: '30px', border: '2px solid rgb(80,80,80)'}}>
             <Row className='mb-4 gap-3'>
                 <Col md='auto'>
-                    <Image variant='thumb' src={episodeDetails.image.medium}/>
+                    {<Image variant='thumb' src={episodeDetails.image.medium}/>}
                 </Col>
                 <Col md className='d-flex align-items-center'>
                     <div>

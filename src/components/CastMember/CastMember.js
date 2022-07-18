@@ -1,12 +1,44 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { Container, Image, Row, Col } from 'react-bootstrap';
+import noImage from '../../images/no-image.png'
 
-const CastMember = () => {
+const CastMember = ({ castMemberInfo }) => {
+
+
     return (
-        <div>
-            <h2>CastMember</h2>
-            <Link to="/cast-member-details">Details</Link>
-        </div>
+        <Container className='displayCard border border-dark'>
+            <Row>
+                <Col xs='12' className='d-flex align-items-center justify-content-center'>
+                    {castMemberInfo.person.image ? 
+                        <Image 
+                            variant='thumb' 
+                            src={castMemberInfo.person.image.medium} 
+                            alt={castMemberInfo.person.name}
+                            className='mt-2'
+                        />
+                        : <Image 
+                            variant='thumb' 
+                            src={noImage} 
+                            alt='No image' 
+                            style={{height: '295px', width: '210px'}}
+                            className='mt-2'
+                        />
+                    }
+                </Col>
+                <Col>
+                    <hr/>
+                    <div className='d-flex flex-column align-items-center'>
+                        <h2>{castMemberInfo.person.name}</h2>
+                        <p>{castMemberInfo.type}</p>
+                        <Link 
+                            to={`/cast-member-details/${castMemberInfo.person.id}`}
+                            style={{ textDecoration: 'none' }}
+                            className='mb-2'
+                        >Details</Link>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

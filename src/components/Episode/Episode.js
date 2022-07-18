@@ -12,7 +12,7 @@ const Episode = ({ episode }) => {
     }
 
     return (
-        <Card className='showCard'>
+        <Card className='displayCard'>
             {episode.image ?
                 <Card.Img variant='top' src={episode.image.medium} className='cardImg'/>
                 : <p>No Image</p>
