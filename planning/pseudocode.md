@@ -16,7 +16,7 @@
  - [x] Create submit handler to store input in searchString state OR use Navigate to take user to /results/:searchString
  
  ## ShowResults
- - [ ] Receive searchString in props?
+ - [x] Receive searchString in props
  - [ ] Create useEffect function with a fetch for shows based on searchString
  - [x] Map over the response to call Show for each element and pass showInfo as a prop
 

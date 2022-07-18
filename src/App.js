@@ -15,19 +15,7 @@ export const FunctionContext = createContext()
 function App() {
 
   function stripHtml(string) {
-    let stringArray = [...string]
-    for(let i=0; i < stringArray.length; i++) {
-        if(stringArray[i] === '<') {
-            if(stringArray[i+1] === '/') {
-                stringArray.splice(i, 4)
-            } else {
-                stringArray.splice(i, 3)
-            }
-        }
-    }
-    const strippedString = stringArray.join('')
-
-    return strippedString
+    return string.replace(/(<([^>]+)>)/gi, "")
   }
 
   return (
