@@ -26,7 +26,7 @@ const Header = () => {
             <Link to="/"
                 style={{
                     textDecoration: 'none',
-                    color: 'gold',
+                    color: 'rgb(190,150,0)',
                 }}
                 className='ms-5'
             >

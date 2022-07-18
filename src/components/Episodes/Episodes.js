@@ -8,6 +8,8 @@ const Episodes = () => {
     const [episodeDetails, setEpisodeDetails] = useState(data)
     const showID = useParams()
     const numSeasons = getSeasons(episodeDetails)
+
+    
     
     function getSeasons(arr) {
         const seasons = {}
@@ -24,12 +26,17 @@ const Episodes = () => {
         // </Container>
 
         <Container>
-            {numSeasons.forEach((season, index) => {
+            {numSeasons.map((season, index) => {
                 return(
-                    <Row key={index} xs={1} md={2} lg={3} xl={4} className='g-4'>
-                        <h2>Season {index + 1}</h2>
-                        {episodeDetails.filter(episode => episode.season === index + 1).map(episode => <Episode key={episode.id} episode={episode} />)}
-                    </Row>
+                    <>
+                        <Row className='mt-4 mb-2' style={{background: 'rgb(190,150,0)'}}>
+                            <h2>Season {index + 1}</h2>
+                        </Row>
+                        <Row key={index} xs={1} md={2} lg={3} xl={4} className='g-4'>
+                            
+                            {episodeDetails.filter(episode => episode.season === index + 1).map(episode => <Episode key={episode.id} episode={episode} />)}
+                        </Row>
+                    </>
                 )
             })}
         </Container>

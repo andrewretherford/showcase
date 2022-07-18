@@ -5,6 +5,7 @@ import Episodes from './components/Episodes/Episodes';
 import Cast from './components/Cast/Cast';
 import EpisodeDetails from './components/EpisodeDetails/EpisodeDetails';
 import CastMemberDetails from './components/CastMemberDetails/CastMemberDetails';
+import Home from './components/Home/Home';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { createContext } from 'react';
@@ -30,18 +31,18 @@ function App() {
   }
 
   return (
-    <Container fluid='xs'>
+    <Container fluid='xs' style={{overflow: 'hidden'}}>
         <Header />
         <main>
           <FunctionContext.Provider value={stripHtml}>
             <Routes>
-              <Route path="/" element={<ShowResults />} />
-              <Route path="/results/:query" element={<ShowResults />} />
-              <Route path="/show-details/:showId" element={<ShowDetails />} />
-              <Route path="/episodes/*" element={<Episodes />} />
-              <Route path="/episode-details/:episodeID" element={<EpisodeDetails />} />
-              <Route path="/cast" element={<Cast />} />
-              <Route path="/cast-member-details" element={<CastMemberDetails />} />
+              <Route path="/" element={<Home />} />
+              <Route path="results/:query" element={<ShowResults />} />
+              <Route path="show-details/:showId" element={<ShowDetails />} />
+              <Route path="episodes/*" element={<Episodes />} />
+              <Route path="episode-details/:episodeID" element={<EpisodeDetails />} />
+              <Route path="cast" element={<Cast />} />
+              <Route path="cast-member-details" element={<CastMemberDetails />} />
             </Routes>
           </FunctionContext.Provider>
         </main>
