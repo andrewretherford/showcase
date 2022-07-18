@@ -31,9 +31,10 @@ function App() {
   }
 
   return (
-    <Container fluid='xs' style={{overflow: 'hidden'}}>
-        <Header />
-        <main>
+    <>
+      <Header />
+      <Container fluid='xs' style={{overflow: 'hidden'}}>
+        <main style={{marginTop: '130px', marginBottom: '30px'}}>
           <FunctionContext.Provider value={stripHtml}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -46,7 +47,8 @@ function App() {
             </Routes>
           </FunctionContext.Provider>
         </main>
-    </Container>
+      </Container>
+    </>
   );
 }
 

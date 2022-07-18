@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col, Navbar } from 'react-bootstrap';
 
 const Header = () => {
     const [searchString, setSearchString] = useState('')
@@ -17,7 +17,7 @@ const Header = () => {
     }
 
     return (
-        <header className='d-flex align-items-center justify-content-between'
+        <Navbar fixed='top' className='d-flex align-items-center justify-content-between'
             style={{
                 background: 'rgb(55,55,55)',
                 minHeight: '100px',
@@ -54,7 +54,7 @@ const Header = () => {
                     </Row>
                 </Form.Group>
             </Form>
-        </header>
+        </Navbar>
     );
 };
 

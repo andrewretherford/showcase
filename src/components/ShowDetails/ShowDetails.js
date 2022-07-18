@@ -24,7 +24,7 @@ const ShowDetails = () => {
                         <h5><span>Premiered:</span> {showDetails.premiered}</h5>
                         <h5><span>Schedule:</span> {showDetails.schedule.time} {showDetails.network.country.timezone} time on {showDetails.schedule.days.join(', ')}s</h5>
                         <h5><span>Network:</span> {showDetails.network.name}</h5>
-                        <h5><span>Rating: </span> {Object.values(showDetails.rating)}</h5>
+                        <h5><span>Rating: </span> {Object.values(showDetails.rating.average)}</h5>
                         <h5><span></span></h5>
                     </div>
                 </Col>
