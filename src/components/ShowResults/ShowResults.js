@@ -13,6 +13,7 @@ const ShowResults = () => {
             .then(data => {
                 setSearchResults(data)
             })
+            .catch(console.error)
     },[query])
 
     return (

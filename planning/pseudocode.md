@@ -17,7 +17,7 @@
  
  ## ShowResults
  - [x] Receive searchString in props
- - [ ] Create useEffect function with a fetch for shows based on searchString
+ - [x] Create useEffect function with a fetch for shows based on searchString
  - [x] Map over the response to call Show for each element and pass showInfo as a prop
 
  ## Show
@@ -27,7 +27,7 @@
 
 ## ShowDetails
  - [x] Get showID with useParams
- - [ ] Create useEffect function with a fetch to retrieve show details
+ - [x] Create useEffect function with a fetch to retrieve show details
  - [x] Display full info for the show
  - [x] Add link to Episodes
  - [x] Add link to Cast
