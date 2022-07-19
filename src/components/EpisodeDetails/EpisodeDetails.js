@@ -13,7 +13,6 @@ const EpisodeDetails = () => {
         fetch(`https://api.tvmaze.com/episodes/${episodeId}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setEpisodeDetails(data)
             })
             .catch(console.error)

@@ -3,12 +3,9 @@ export function removeDuplicates(arr) {
     const castIds = {}
 
     for(let i = 0; i < arr.length; i++) {
-        // if(castIds[arr[i].person.id]) {
-        //     castIds[arr[i].person.id] = [...castIds[arr[i].person.id], i]
-        // } else {
-        //     castIds[arr[i].person.id] = [i]
-        // }
-        castIds[arr[i].person.id] ? (castIds[arr[i].person.id] = [...castIds[arr[i].person.id], i]) : (castIds[arr[i].person.id] = [i])
+        castIds[arr[i].person.id] ? 
+            (castIds[arr[i].person.id] = [...castIds[arr[i].person.id], i]) 
+            : (castIds[arr[i].person.id] = [i])
     }
 
     // filter out duplicate records by condensing job titles (labeled 'type') into one record

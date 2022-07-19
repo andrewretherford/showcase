@@ -1,7 +1,7 @@
+import Episode from '../Episode/Episode';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
-import Episode from '../Episode/Episode';
 
 const Episodes = () => {
     const [episodeDetails, setEpisodeDetails] = useState(null)
@@ -15,7 +15,6 @@ const Episodes = () => {
         .then(data => {
             setEpisodeDetails(data)
             setNumSeasons(getSeasons(data))
-            console.log(data)
         })
         .catch(console.error)
 

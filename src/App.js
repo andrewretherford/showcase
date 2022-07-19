@@ -5,6 +5,7 @@ import ShowDetails from './components/ShowDetails/ShowDetails';
 import Episodes from './components/Episodes/Episodes';
 import EpisodeDetails from './components/EpisodeDetails/EpisodeDetails';
 import Cast from './components/Cast/Cast';
+import Crew from './components/Crew/Crew';
 import { createContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
@@ -30,6 +31,7 @@ function App() {
               <Route path="/results/:showId/episodes" element={<Episodes />} />
               <Route path="/results/:showId/episodes/:episodeId" element={<EpisodeDetails />} />
               <Route path="/results/:showId/cast" element={<Cast />} />
+              <Route path="/results/:showId/crew" element={<Crew />} />
             </Routes>
           </FunctionContext.Provider>
         </main>

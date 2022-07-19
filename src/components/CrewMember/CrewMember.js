@@ -1,18 +1,18 @@
 import { Container, Image, Row, Col } from 'react-bootstrap';
 import noImage from '../../images/no-image.png'
 
-const CastMember = ({ castMemberInfo }) => {
+const CrewMember = ({ crewMemberInfo }) => {
 
 
     return (
         <Container className='displayCard border border-dark'>
             <Row>
                 <Col xs='12' className='d-flex align-items-center justify-content-center'>
-                    {castMemberInfo.person.image ? 
+                    {crewMemberInfo.person.image ? 
                         <Image 
                             variant='thumb' 
-                            src={castMemberInfo.person.image.medium} 
-                            alt={castMemberInfo.person.name}
+                            src={crewMemberInfo.person.image.medium} 
+                            alt={crewMemberInfo.person.name}
                             className='mt-2'
                         />
                         : <Image 
@@ -27,14 +27,14 @@ const CastMember = ({ castMemberInfo }) => {
                 <Col>
                     <hr/>
                     <div className='d-flex flex-column align-items-center'>
-                        <h3>{castMemberInfo.person.name}</h3>
-                        <h5><span>Character: </span>{castMemberInfo.character.name ? castMemberInfo.character.name : '-'}</h5>
-                        {castMemberInfo.person.country ? 
-                            <p>{castMemberInfo.person.country.name}</p>
+                        <h3>{crewMemberInfo.person.name}</h3>
+                        <h5><span>Title: </span>{crewMemberInfo.type ? crewMemberInfo.type : '-'}</h5>
+                        {crewMemberInfo.person.country ? 
+                            <p>{crewMemberInfo.person.country.name}</p>
                             : <p>No country listed</p>
                         }
                         <a 
-                            href={castMemberInfo.person.url}
+                            href={crewMemberInfo.person.url}
                             style={{ textDecoration: 'none' }}
                             className='mb-2'
                         >tvmaze profile</a>
@@ -45,4 +45,4 @@ const CastMember = ({ castMemberInfo }) => {
     );
 };
 
-export default CastMember;
+export default CrewMember;

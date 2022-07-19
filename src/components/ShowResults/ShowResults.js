@@ -1,7 +1,7 @@
+import Show from '../Show/Show';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
-import Show from '../Show/Show';
 
 const ShowResults = () => {
     const [searchResults, setSearchResults] = useState(null)

@@ -70,6 +70,9 @@ const ShowDetails = () => {
                             <Col xs='auto'>
                                 <Link to={`/results/${showDetails.id}/cast`}>Cast</Link>
                             </Col>
+                            <Col xs='auto'>
+                                <Link to={`/results/${showDetails.id}/crew`}>Crew</Link>
+                            </Col>
                             {showDetails.officialSite && 
                                 <Col xs='auto'>
                                     <a href={showDetails.officialSite}>Official Site</a>
