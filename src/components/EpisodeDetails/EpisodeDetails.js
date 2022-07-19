@@ -20,7 +20,17 @@ const EpisodeDetails = () => {
     },[episodeId])
 
     if(!episodeDetails) {
-        return <Container>Loading...</Container>
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>Loading...</h1>
+            </Container>
+        )
+    } else if(episodeDetails.length < 1) {
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>No Results</h1>
+            </Container>
+        )
     } else {
         return (
             <Container className='mt-5 mb-5' style={{background: 'rgb(230,230,230', padding: '30px', border: '2px solid rgb(80,80,80)'}}>

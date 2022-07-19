@@ -29,7 +29,7 @@ function App() {
               <Route path="/results/:showId/details" element={<ShowDetails />} />
               <Route path="/results/:showId/episodes" element={<Episodes />} />
               <Route path="/results/:showId/episodes/:episodeId" element={<EpisodeDetails />} />
-              <Route path="cast" element={<Cast />} />
+              <Route path="/results/:showId/cast" element={<Cast />} />
             </Routes>
           </FunctionContext.Provider>
         </main>

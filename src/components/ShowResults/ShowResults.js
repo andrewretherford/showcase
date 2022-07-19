@@ -16,16 +16,30 @@ const ShowResults = () => {
             .catch(console.error)
     },[query])
 
-    return (
-        <Container className='mt-4 mb-4'>
-            <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
-                {searchResults ? 
-                    searchResults.map((show, index) => <Show key={index} showInfo={show}/>)
-                    : <p>Loading...</p>
-                }    
-            </Row>
-        </Container>
-    );
+    if(!searchResults) {
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>Loading...</h1>
+            </Container>
+        )
+    } else if(searchResults.length < 1) {
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>No Results</h1>
+            </Container>
+        )
+    } else {
+        return (
+            <Container className='mt-4 mb-4'>
+                <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
+                    {searchResults ? 
+                        searchResults.map((show, index) => <Show key={index} showInfo={show}/>)
+                        : <p>Loading...</p>
+                    }    
+                </Row>
+            </Container>
+        );
+    }
 };
 
 export default ShowResults;

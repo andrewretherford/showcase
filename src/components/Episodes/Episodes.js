@@ -32,7 +32,17 @@ const Episodes = () => {
     },[showId])
      
     if(!episodeDetails && !numSeasons) {
-        return <p>Loading...</p>
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>Loading...</h1>
+            </Container>
+        )
+    } else if(episodeDetails.length < 1) {
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>No Results</h1>
+            </Container>
+        )
     } else {
         return (
             <Container>

@@ -19,7 +19,17 @@ const ShowDetails = () => {
     },[showId])
 
     if(!showDetails) {
-        return <p>Loading...</p>
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>Loading...</h1>
+            </Container>
+        )
+    } else if(showDetails.length < 1) {
+        return (
+            <Container className='d-flex justify-content-center'>
+                <h1>No Results</h1>
+            </Container>
+        )
     } else {
         return (
             <Container className='mt-5 mb-5' style={{background: 'rgb(230,230,230', padding: '30px', border: '2px solid rgb(80,80,80)'}}>
@@ -58,7 +68,7 @@ const ShowDetails = () => {
                                 <Link to={`/results/${showDetails.id}/episodes`}>Episodes</Link>
                             </Col>
                             <Col xs='auto'>
-                                <Link to="/cast">Cast</Link>
+                                <Link to={`/results/${showDetails.id}/cast`}>Cast</Link>
                             </Col>
                             {showDetails.officialSite && 
                                 <Col xs='auto'>

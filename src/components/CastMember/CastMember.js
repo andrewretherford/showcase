@@ -20,7 +20,7 @@ const CastMember = ({ castMemberInfo }) => {
                             variant='thumb' 
                             src={noImage} 
                             alt='No image' 
-                            style={{height: '295px', width: '210px'}}
+                            style={{width: '210px'}}
                             className='mt-2'
                         />
                     }
@@ -29,12 +29,11 @@ const CastMember = ({ castMemberInfo }) => {
                     <hr/>
                     <div className='d-flex flex-column align-items-center'>
                         <h3>{castMemberInfo.person.name}</h3>
-                        <p>{castMemberInfo.type}</p>
+                        <h5><span>Character: </span>{castMemberInfo.character.name ? castMemberInfo.character.name : '-'}</h5>
                         {castMemberInfo.person.country ? 
                             <p>{castMemberInfo.person.country.name}</p>
                             : <p>No country listed</p>
                         }
-                        <a href=""></a>
                         <a 
                             href={castMemberInfo.person.url}
                             style={{ textDecoration: 'none' }}
