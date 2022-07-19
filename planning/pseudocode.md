@@ -34,7 +34,7 @@
  
 ## Episodes
  - [x] Get showId with useSearchParams
- - [ ] Create useEffect function with a fetch to retrieve all episodes
+ - [x] Create useEffect function with a fetch to retrieve all episodes
  - [x] Map over the response to call Episode for each element ~~and pass episodeInfo as a prop~~
 
 ## Episode
@@ -43,8 +43,8 @@
  - [x] Add link to EpisodeDetails with episodeID as a search parameter
 
 ## EpisodeDetails
- - [ ] Get episodeID with useSearchParams
- - [ ] Create useEffect function with a fetch to retrieve episode details
+ - [x] Get episodeID with useSearchParams
+ - [x] Create useEffect function with a fetch to retrieve episode details
  - [x] Display full info for the episode
 
 ## Cast

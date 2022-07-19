@@ -16,7 +16,7 @@ const ShowDetails = () => {
                 setShowDetails(data)
             })
             .catch(console.error)
-    },[])
+    },[showId])
 
     if(!showDetails) {
         return <p>Loading...</p>
@@ -55,7 +55,7 @@ const ShowDetails = () => {
                     <Container>
                         <Row>
                             <Col xs='auto'>
-                                <Link to={`/results/${showDetails.name}/${showDetails.id}/episodes`}>Episodes</Link>
+                                <Link to={`/results/${showDetails.id}/episodes`}>Episodes</Link>
                             </Col>
                             <Col xs='auto'>
                                 <Link to="/cast">Cast</Link>

@@ -21,7 +21,7 @@ const Episode = ({ episode }) => {
                         : <p>No Summary</p>
                     }               
                     <Link 
-                        to={`/episode-details/${episode.id}`}
+                        to={`${episode.id}`}
                         style={{ textDecoration: 'none' }}
                     >Details</Link>
             </Card.Body>

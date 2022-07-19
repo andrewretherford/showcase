@@ -27,8 +27,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/results/:query" element={<ShowResults />} />
               <Route path="/results/:showId/details" element={<ShowDetails />} />
-              <Route path="/results/:showName/:showId/episodes" element={<Episodes />} />
-              <Route path="episode-details/:episodeID" element={<EpisodeDetails />} />
+              <Route path="/results/:showId/episodes" element={<Episodes />} />
+              <Route path="/results/:showId/episodes/:episodeId" element={<EpisodeDetails />} />
               <Route path="cast" element={<Cast />} />
             </Routes>
           </FunctionContext.Provider>

@@ -43,7 +43,7 @@ const Episodes = () => {
                                 <h2>Season {season}</h2>
                             </Row>
                             <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
-                                {episodeDetails.filter(episode => episode.season == season).map(episode => <Episode key={episode.id} episode={episode} />)}
+                                {episodeDetails.filter(episode => episode.season === parseInt(season)).map(episode => <Episode key={episode.id} episode={episode} />)}
                             </Row>
                         </div>
                     )
