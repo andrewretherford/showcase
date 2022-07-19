@@ -11,7 +11,7 @@ const Show = ({ showInfo }) => {
     return (
         <Card className='displayCard'>
             {show.image ?
-                <Card.Img variant='top' src={show.image.medium} className='cardImg'/>
+                <Card.Img variant='top' src={show.image.medium ? show.image.medium : noImage} className='cardImg'/>
                 : <Card.Img variant='top' src={noImage} className='cardImg'/>
             }
             <Card.Body>                  

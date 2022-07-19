@@ -5,7 +5,7 @@
 - [x] Set up routes for Home, ShowResults, ShowDetails, Episodes, EpisodeDetail, Cast
 
 ## Home
-- [ ] Create landing page content
+- [x] Create landing page content
 
 ## Header
  - [x] Add title
@@ -48,17 +48,17 @@
  - [x] Display full info for the episode
 
 ## Cast
- - [ ] Get showId with useSearchParams
- - [ ] Create useEffect function with a fetch to retrieve the cast data
+ - [x] Get showId with useSearchParams
+ - [x] Create useEffect function with a fetch to retrieve the cast data
  - [x] Map over the response to call CastMember for each element and pass castInfo as a prop
 
 ## CastMember
  - [x] Receive castInfo in props
- - [ ] Display cast member name, thumbnail, and character name
+ - [x] Display cast member name, thumbnail, and character name
  - [x] Add link to CastMemberDetails with castMemberID as a search parameter
 
 # Stretch Goals
- - [ ] Test bookmarking results in browser
-    - [ ] Verify that bookmarked pages can load and pull new API data
+ - [x] Test bookmarking results in browser
+    - [x] Verify that bookmarked pages can load and pull new API data
  - [ ] Add link to CastMemberDetails that performs a google search for their name with a parameter that specifies IMDB
- - [ ] Add a default search for all shows to the home page on load
+ - [x] Add a default search for all shows to the home page on load
