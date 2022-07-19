@@ -1,46 +1,56 @@
-import { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Container, Row } from 'react-bootstrap';
 import Episode from '../Episode/Episode';
-import data from '../../episodes.json'
 
 const Episodes = () => {
-    const [episodeDetails, setEpisodeDetails] = useState(data)
-    const showID = useParams()
-    const numSeasons = getSeasons(episodeDetails)
+    const [episodeDetails, setEpisodeDetails] = useState(null)
+    const [numSeasons, setNumSeasons] = useState(null)
+    const { showId } = useParams()
 
     
+    useEffect(() => {
+        fetch(`https://api.tvmaze.com/shows/${showId}/episodes`)
+        .then(res => res.json())
+        .then(data => {
+            setEpisodeDetails(data)
+            setNumSeasons(getSeasons(data))
+            console.log(data)
+        })
+        .catch(console.error)
+
+        function getSeasons(arr) {
+            if(!arr) return
     
-    function getSeasons(arr) {
-        const seasons = {}
-        for(let i=0; i < arr.length; i++) {
-            !seasons[arr[i].season] && (seasons[arr[i].season] = true)
+            const seasons = {}
+            for(let i=0; i < arr.length; i++) {
+                !seasons[arr[i].season] && (seasons[arr[i].season] = true)
+            }
+            return Object.keys(seasons)
         }
-        return Object.keys(seasons)
-    } 
 
-    return (
-        // <Container>
-
-        //     {episodeDetails.map((episode) => <Episode key={episode.id} episode={episode}/>)}
-        // </Container>
-
-        <Container>
-            {numSeasons.map((season, index) => {
-                return(
-                    <>
-                        <Row className='mt-4 mb-2' style={{background: 'rgb(190,150,0)'}}>
-                            <h2>Season {index + 1}</h2>
-                        </Row>
-                        <Row key={index} xs={1} md={2} lg={3} xl={4} className='g-4'>
-                            
-                            {episodeDetails.filter(episode => episode.season === index + 1).map(episode => <Episode key={episode.id} episode={episode} />)}
-                        </Row>
-                    </>
-                )
-            })}
-        </Container>
-    );
+    },[showId])
+     
+    if(!episodeDetails && !numSeasons) {
+        return <p>Loading...</p>
+    } else {
+        return (
+            <Container>
+                {numSeasons.map((season, index) => {
+                    return(
+                        <div key={index}>
+                            <Row className='mt-4 mb-2' style={{background: 'rgb(190,150,0)'}}>
+                                <h2>Season {season}</h2>
+                            </Row>
+                            <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
+                                {episodeDetails.filter(episode => episode.season == season).map(episode => <Episode key={episode.id} episode={episode} />)}
+                            </Row>
+                        </div>
+                    )
+                })}
+            </Container>
+        );
+    }
 };
 
 export default Episodes;

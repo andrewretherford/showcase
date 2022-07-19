@@ -13,7 +13,6 @@ const ShowDetails = () => {
         fetch(`https://api.tvmaze.com/shows/${showId}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setShowDetails(data)
             })
             .catch(console.error)
@@ -56,7 +55,7 @@ const ShowDetails = () => {
                     <Container>
                         <Row>
                             <Col xs='auto'>
-                                <Link to="/episodes">Episodes</Link>
+                                <Link to={`/results/${showDetails.name}/${showDetails.id}/episodes`}>Episodes</Link>
                             </Col>
                             <Col xs='auto'>
                                 <Link to="/cast">Cast</Link>

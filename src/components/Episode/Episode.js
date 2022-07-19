@@ -1,21 +1,17 @@
 import { Card } from 'react-bootstrap';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FunctionContext } from '../../App'
+import noImage from '../../images/no-image.png'
 
 const Episode = ({ episode }) => {
     const stripHtml = useContext(FunctionContext)
-    const navigate = useNavigate()
-
-    function clickHandler(e) {
-        navigate(`/episode-details/${episode.id}`)
-    }
 
     return (
         <Card className='displayCard'>
             {episode.image ?
                 <Card.Img variant='top' src={episode.image.medium} className='cardImg'/>
-                : <p>No Image</p>
+                : <Card.Img variant='top' src={noImage} className='cardImg'/>
             }
             <Card.Body>                  
                     <Card.Title>{episode.name}</Card.Title>

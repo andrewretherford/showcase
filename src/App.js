@@ -1,14 +1,13 @@
 import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 import ShowResults from './components/ShowResults/ShowResults';
 import ShowDetails from './components/ShowDetails/ShowDetails';
 import Episodes from './components/Episodes/Episodes';
-import Cast from './components/Cast/Cast';
 import EpisodeDetails from './components/EpisodeDetails/EpisodeDetails';
-import CastMemberDetails from './components/CastMemberDetails/CastMemberDetails';
-import Home from './components/Home/Home';
+import Cast from './components/Cast/Cast';
+import { createContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import { createContext } from 'react';
 
 export const FunctionContext = createContext()
 
@@ -26,9 +25,9 @@ function App() {
           <FunctionContext.Provider value={stripHtml}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="results/:query" element={<ShowResults />} />
-              <Route path="show-details/:showId" element={<ShowDetails />} />
-              <Route path="episodes/*" element={<Episodes />} />
+              <Route path="/results/:query" element={<ShowResults />} />
+              <Route path="/results/:showId/details" element={<ShowDetails />} />
+              <Route path="/results/:showName/:showId/episodes" element={<Episodes />} />
               <Route path="episode-details/:episodeID" element={<EpisodeDetails />} />
               <Route path="cast" element={<Cast />} />
             </Routes>

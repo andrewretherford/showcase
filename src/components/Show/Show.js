@@ -24,7 +24,7 @@ const Show = ({ showInfo }) => {
                         : <p>No summary available</p>
                     }                   
                     <Link 
-                        to={`/show-details/${show.id}`}
+                        to={`/results/${show.id}/details`}
                         style={{ textDecoration: 'none' }}
                     >Details</Link>
             </Card.Body>
