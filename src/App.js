@@ -12,11 +12,11 @@ import { Container } from 'react-bootstrap';
 
 export const FunctionContext = createContext()
 
-function App() {
+function stripHtml(string) {
+  return string.replace(/(<([^>]+)>)/gi, "")
+}
 
-  function stripHtml(string) {
-    return string.replace(/(<([^>]+)>)/gi, "")
-  }
+function App() {
 
   return (
     <>

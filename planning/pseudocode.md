@@ -60,5 +60,5 @@
 # Stretch Goals
  - [x] Test bookmarking results in browser
     - [x] Verify that bookmarked pages can load and pull new API data
- - [ ] Add link to CastMemberDetails that performs a google search for their name with a parameter that specifies IMDB
+ - [ ] ~~Add link to CastMemberDetails that performs a google search for their name with a parameter that specifies IMDB~~
  - [x] Add a default search for all shows to the home page on load

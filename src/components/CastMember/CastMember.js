@@ -3,11 +3,10 @@ import noImage from '../../images/no-image.png'
 
 const CastMember = ({ castMemberInfo }) => {
 
-
     return (
         <Container className='displayCard border border-dark'>
             <Row>
-                <Col xs='12' className='d-flex align-items-center justify-content-center'>
+                <Col xs='12' className='d-flex align-items-center justify-content-center' style={{height: '303px'}}>
                     {castMemberInfo.person.image ? 
                         <Image 
                             variant='thumb' 

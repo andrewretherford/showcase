@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Form, Button, Row, Col, Navbar } from 'react-bootstrap';
+import { Form, Button, Row, Col, Navbar, Image } from 'react-bootstrap';
+import home from '../../images/home.ico'
 
 const Header = () => {
     const [searchString, setSearchString] = useState('')
@@ -12,48 +13,54 @@ const Header = () => {
 
     function submitHandler(e) {
         e.preventDefault()
-        navigate(`/results/${searchString}`)
+        searchString && navigate(`/results/${searchString}`)
         setSearchString('')
     }
 
     return (
-        <Navbar fixed='top' className='d-flex align-items-center justify-content-between'
+        <Navbar fixed='top'
             style={{
-                background: 'rgb(55,55,55)',
+                background: 'rgb(35,35,35)',
                 minHeight: '100px',
             }}
         >
-            <Link to="/"
-                style={{
-                    textDecoration: 'none',
-                    color: 'rgb(190,150,0)',
-                }}
-                className='ms-5'
+            <Row xs='2' md='1'
+                className='d-flex align-items-center'
+                style={{width: '100%'}}
             >
-                <h1>Showcase</h1>
-            </Link>
-            <Form onSubmit={submitHandler}>
-                <Form.Group controlId='searchInput' >
-                    <Row>
-                        <Col className='gx-2'>
-                            <Form.Control 
-                                type='text'
-                                placeholder='Search for shows'
-                                style={{height: '2.5em'}}
-                                onChange={changeHandler}
-                                value={searchString}
-                            />
-                        </Col>
-                        <Col className='gx-2'>
-                            <Button 
-                                variant='light' 
-                                type='submit'
-                                style={{ height: '2.5em' }}
-                            >Submit</Button>
-                        </Col>
-                    </Row>
-                </Form.Group>
-            </Form>
+                <Col xs={{ span: 2, order: 1 }} md={{ span: 2 }} lg={{ span: 4, order: 0}}>
+                    <Link to="/">
+                        <Image src={home} alt='home icon' className='ms-5' style={{height: '40px'}} />
+                    </Link>
+                </Col>
+                <Col xs={{ span: 12, order: 0 }} md={{ span: 12 }} lg={{ span: 4, order: 1 }}>
+                        <h1 style={{color: 'rgb(200,160,0)', textAlign: 'center'}}>Showcase</h1>
+                </Col>
+                <Col xs={{ span: 10, order: 2 }} md={{ span: 10, order: 2 }} lg={{ span: 4 }}>
+                    <Form onSubmit={submitHandler}>
+                        <Form.Group controlId='searchInput'>
+                            <Row className='d-flex justify-content-end'>
+                                <Col className='gx-1' xs='auto'>
+                                    <Form.Control 
+                                        type='text'
+                                        placeholder='Search for shows'
+                                        style={{height: '2.5em', maxWidth: '232px'}}
+                                        onChange={changeHandler}
+                                        value={searchString}
+                                    />
+                                </Col>
+                                <Col xs='auto' className=''>
+                                    <Button 
+                                        variant='light' 
+                                        type='submit'
+                                        style={{ height: '2.5em' }}
+                                    >Submit</Button>
+                                </Col>
+                            </Row>
+                        </Form.Group>
+                    </Form>
+                </Col>
+            </Row>
         </Navbar>
     );
 };
