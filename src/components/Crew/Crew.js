@@ -2,7 +2,7 @@ import CrewMember from '../CrewMember/CrewMember';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap'
-import { removeDuplicates } from '../../removeDuplicates';
+import { removeDuplicates } from '../../functions/removeDuplicates';
 
 const Crew = () => {
     const [crew, setCrew] = useState(null)

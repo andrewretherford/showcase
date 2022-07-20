@@ -1,7 +1,8 @@
 import Show from '../Show/Show';
-import { useEffect, useState, useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
+import { apiResultReducer } from '../../functions/apiResultReducer';
 
 const ShowResults = () => {
     const initialState = {
@@ -10,7 +11,6 @@ const ShowResults = () => {
         error: ''
     }
 
-    const [searchResults, setSearchResults] = useState(null)
     const [apiState, dispatch] = useReducer(apiResultReducer, initialState)
     const { query } = useParams()
     const { result, loading, error } = apiState
@@ -21,7 +21,7 @@ const ShowResults = () => {
                 if(res.status === 404) {
                     return dispatch({
                         type: 'error',
-                        error: `No result found for ${query}. Please try another search.`
+                        error: `No results found for ${query}. Please try another search.`
                     })
                 } else if(res.status === 200 || res.status === 304) {
                     return res.json()
@@ -41,22 +41,6 @@ const ShowResults = () => {
                 console.log(err)
             })
     },[query])
-
-    function apiResultReducer(state, action) {
-        switch(action.type) {
-            case 'loading': 
-                return {...state, loading: true}
-
-            case 'success':
-                return {...state, loading: false, result: action.data}
-            
-            case 'error':
-                return {...state, loading: false, error: action.error}
-
-            default:
-                return state
-        }
-    }
 
         return (
             <Container className='mt-4 mb-4'>

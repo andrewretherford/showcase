@@ -44,7 +44,7 @@ const Header = () => {
                                     <Form.Control 
                                         type='text'
                                         placeholder='Search for shows'
-                                        style={{height: '2.5em', maxWidth: '232px'}}
+                                        style={{height: '2.5em', maxWidth: '232px', background: 'rgb(230, 230, 230)'}}
                                         onChange={changeHandler}
                                         value={searchString}
                                     />
