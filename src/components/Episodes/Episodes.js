@@ -2,6 +2,7 @@ import Episode from '../Episode/Episode';
 import { useState, useReducer, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
+import { getData } from '../../functions/getData';
 import { apiResultReducer } from '../../functions/apiResultReducer';
 
 const Episodes = () => {
@@ -18,32 +19,12 @@ const Episodes = () => {
 
     
     useEffect(() => {
-        dispatch({ type: 'loading' })
-        fetch(`https://api.tvmaze.com/shows/${showId}/episodes`)
-        .then(res => {
-            if(res.status === 404) {
-                return dispatch({
-                    type: 'error',
-                    error: `Oops, couldn't find any episodes for this show!`
-                })
-            } else if(res.status === 200 || res.status === 304) {
-                return res.json()
-            }
-        })
-        .then(data => {
-            dispatch({
-                type: 'success',
-                data: data
-            })
-            setNumSeasons(getSeasons(data))
-        })
-        .catch(err => {
-            dispatch({
-                type: 'error',
-                error: 'Oops, something went wrong! Please try again later.'
-            })
-            console.log(err)
-        })
+        getData(dispatch, `shows/${showId}/episodes`, `Oops, couldn't find any episodes for this show!`)
+    },[showId])
+
+    useEffect(() => {
+        
+        apiState.result && setNumSeasons(getSeasons(apiState.result))
 
         function getSeasons(arr) {
             if(!arr) return
@@ -55,7 +36,7 @@ const Episodes = () => {
             return Object.keys(seasons)
         }
 
-    },[showId])
+    },[apiState])
      
     return (
         <Container>

@@ -8,7 +8,11 @@ export function apiResultReducer(state, action) {
         
         case 'error':
             return {...state, loading: false, error: action.error}
-
+        
+        case 'removeDupes':
+            console.log(state)
+            if(!state.result) return {...state, loading: false, result: action.data}
+            else return state
         default:
             return state
     }

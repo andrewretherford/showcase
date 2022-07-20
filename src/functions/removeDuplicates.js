@@ -17,29 +17,17 @@ export function removeDuplicates(arr) {
         // check that this is the first instance of an id and that duplicates exist
         if(arr[i].person.id !== duplicate && castIds[arr[i].person.id].length > 1) {
             // add entries from the duplicates based on the number of array indexes stored in castIds for this id
-            switch(castIds[arr[i].person.id].length) {
-                case 2:
-                    arr[castIds[arr[i].person.id][0]] = {...arr[castIds[arr[i].person.id][0]], type: `${arr[castIds[arr[i].person.id][0]].type}, ${arr[castIds[arr[i].person.id][1]].type}` }
-                    filteredCast.push(arr[i])
-                    break
-
-                case 3:
-                    arr[castIds[arr[i].person.id][0]] = {...arr[castIds[arr[i].person.id][0]], type: `${arr[castIds[arr[i].person.id][0]].type}, ${arr[castIds[arr[i].person.id][1]].type}, ${arr[castIds[arr[i].person.id][2]].type}` }
-                    filteredCast.push(arr[i])
-                    break
-
-                case 4: 
-                    arr[castIds[arr[i].person.id][0]] = {...arr[castIds[arr[i].person.id][0]], type: `${arr[castIds[arr[i].person.id][0]].type}, ${arr[castIds[arr[i].person.id][1]].type}, ${arr[castIds[arr[i].person.id][2]].type}, ${arr[castIds[arr[i].person.id][3]].type}` }
-                    filteredCast.push(arr[i])
-                    break
-
-                case 5:
-                    arr[castIds[arr[i].person.id][0]] = {...arr[castIds[arr[i].person.id][0]], type: `${arr[castIds[arr[i].person.id][0]].type}, ${arr[castIds[arr[i].person.id][1]].type}, ${arr[castIds[arr[i].person.id][2]].type}, ${arr[castIds[arr[i].person.id][3]].type}, ${arr[castIds[arr[i].person.id][4]].type}` }
-                    filteredCast.push(arr[i])
-                    break
-                
-                default: break
+            
+            // initialize string with first type for this person 
+            let typeString = `${arr[castIds[arr[i].person.id][0]].type}`
+            // loop through the duplicates and add type to the string
+            for(let j=1; j < castIds[arr[i].person.id].length; j++) {
+                typeString += `, ${arr[castIds[arr[i].person.id][j]].type}`
             }
+            // set set type for the first record to the full string of types and add to the filtered array
+            arr[castIds[arr[i].person.id][0]] = {...arr[castIds[arr[i].person.id][0]], type: typeString}
+            filteredCast.push(arr[i])
+
         } else if(arr[i].person.id !== duplicate && castIds[arr[i].person.id].length <= 1) {
             filteredCast.push(arr[i])
         }

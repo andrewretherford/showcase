@@ -2,6 +2,7 @@ import { useContext, useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { FunctionContext } from '../../App';
+import { getData } from '../../functions/getData';
 import { apiResultReducer } from '../../functions/apiResultReducer';
 import noImage from '../../images/no-image.png'
 
@@ -18,31 +19,7 @@ const EpisodeDetails = () => {
     const { result, loading, error } = apiState
 
     useEffect(() => {
-        dispatch({ type: 'loading' })
-        fetch(`https://api.tvmaze.com/episodes/${episodeId}`)
-        .then(res => {
-            if(res.status === 404) {
-                return dispatch({
-                    type: 'error',
-                    error: `Oops, couldn't find any details for this episode!`
-                })
-            } else if(res.status === 200 || res.status === 304) {
-                return res.json()
-            }
-        })
-        .then(data => {
-            dispatch({
-                type: 'success',
-                data: data
-            })
-        })
-        .catch(err => {
-            dispatch({
-                type: 'error',
-                error: 'Oops, something went wrong! Please try again later.'
-            })
-            console.log(err)
-        })
+        getData(dispatch, `episodes/${episodeId}`, `Oops, couldn't find any details for this episode!`)
     },[episodeId])
 
     return (
