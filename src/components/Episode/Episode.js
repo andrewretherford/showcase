@@ -9,21 +9,19 @@ const Episode = ({ episode }) => {
 
     return (
         <Card className='displayCard'>
-            {episode.image ?
-                <Card.Img variant='top' src={episode.image.medium} className='cardImg'/>
-                : <Card.Img variant='top' src={noImage} className='cardImg'/>
-            }
+            <Card.Img variant='top' src={episode.image ? episode.image.medium : noImage} alt='episode cover image' className='cardImg'/>
             <Card.Body>                  
                     <Card.Title>{episode.name}</Card.Title>
-                    {episode.summary ? (episode.summary.length > 200 ? 
-                        <Card.Text style={{ textAlign: 'justify' }}>{stripHtml(episode.summary.slice(0,200)) + '...'}</Card.Text>
-                        : <Card.Text style={{ textAlign: 'justify' }}>{stripHtml(episode.summary)}</Card.Text>)
+                    {episode.summary ? 
+                        <Card.Text className='cardText'>
+                            {episode.summary.length > 200 ?
+                                stripHtml(episode.summary).slice(0,200) + '...'
+                                : stripHtml(episode.summary)
+                            }
+                        </Card.Text>
                         : <p>No Summary</p>
                     }               
-                    <Link 
-                        to={`${episode.id}`}
-                        style={{ textDecoration: 'none' }}
-                    >Details</Link>
+                    <Link to={`${episode.id}`} className='cardLink'>Details</Link>
             </Card.Body>
         </Card>
     );

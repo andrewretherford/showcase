@@ -4,6 +4,15 @@
   /* background: rgb(0,100,0,.2); */
 }
 
+:root {
+  --mainGold: rgb(200,160,0);
+  --mutedGold: rgb(145, 125, 0);
+  --darkGrey: rgb(35,35,35);
+  --medGrey: rgb(80, 80, 80);
+  --lightGrey: rgb(230,230,230);
+  --buttonGrey: rgb(55,55,55);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,19 +20,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(80, 80, 80);
+
+  background: var(--medGrey);
+}
+
+.appContainer {
+  overflow: hidden;
+}
+
+main {
+  margin-top: 130px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
 }
 
 span {
-  color: rgb(145, 125, 0);
+  color: var(--mutedGold);
 }
 
 .displayCard {
   border-radius: 1;
-  background: rgb(230,230,230);
+  background: var(--lightGrey);
+  max-width: 360px;
 }
 
 .cardImg {
   border-radius: 0;
   padding-top: 10px;
+}
+
+.cardText {
+  text-align: justify;
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.detailsDisplay {
+  background: var(--lightGrey);
+  border: 1px solid var(--darkGrey);
+  padding: 30px;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.image {
+  width: 210px;
 }

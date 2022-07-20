@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 import { getData } from '../../functions/getData';
 import { apiResultReducer } from '../../functions/apiResultReducer';
+import './Episodes.css'
 
 const Episodes = () => {
     const initialState = {
@@ -23,7 +24,7 @@ const Episodes = () => {
     },[showId])
 
     useEffect(() => {
-        
+        // get array of seasons once apiState is updated with a response
         apiState.result && setNumSeasons(getSeasons(apiState.result))
 
         function getSeasons(arr) {
@@ -44,19 +45,19 @@ const Episodes = () => {
                 numSeasons.map((season, index) => {
                     return(
                         <div key={index}>
-                            <Row className='mt-4 mb-2' style={{background: 'rgb(190,150,0)'}}>
-                                <h2>Season {season}</h2>
+                            <Row className='mt-5 mb-3 seasonHeader'>
+                                <h2 className='mt-1'>Season {season}</h2>
                             </Row>
-                            <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
+                            <Row xs={1} md={2} lg={3} xl={4} className='g-4 contentWrapper'>
                                 {result.filter(episode => episode.season === parseInt(season)).map(episode => <Episode key={episode.id} episode={episode} />)}
                             </Row>
                         </div>
                     )
                 })
             }
-            {loading && <Container className='d-flex justify-content-center'><h1>Loading...</h1></Container>}
-            {result && result.length < 1 && <Container className='d-flex justify-content-center'><h1>No Results</h1></Container>}
-            {error && <Container className='d-flex justify-content-center'><h1>{error}</h1></Container>}
+            {loading && <Container className='contentWrapper'><h1>Loading...</h1></Container>}
+            {result && result.length < 1 && <Container className='contentWrapper'><h1>No Results</h1></Container>}
+            {error && <Container className='contentWrapper'><h1>{error}</h1></Container>}
         </Container>
     )
 };

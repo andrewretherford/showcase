@@ -23,15 +23,12 @@ const ShowDetails = () => {
     },[showId])
 
     return (
-        <>
+        <Container className='mt-5 mb-5 detailsDisplay'>
             {result &&
-                <Container className='mt-5 mb-5' style={{background: 'rgb(230,230,230', padding: '30px', border: '2px solid rgb(80,80,80)'}}>
+                <>
                     <Row className='mb-4 gap-3'>
                         <Col md='auto'>
-                            {result.image ?
-                                <Image variant='thumb' src={result.image.medium}/>
-                                : <Image variant='thumb' src={noImage}/>
-                            }
+                            <Image variant='thumb' src={result.image ? result.image.medium: noImage}/>
                         </Col>
                         <Col md className='d-flex align-items-center'>
                             <div>
@@ -40,46 +37,41 @@ const ShowDetails = () => {
                                 <h5><span>Type:</span> {result.type ? result.type : '-'} &nbsp;&nbsp; | &nbsp;&nbsp; <span>Language:</span> {result.language ? result.language : '-'}</h5>
                                 <h5><span>Status:</span> {result.status ? result.status : '-'} &nbsp;&nbsp; | &nbsp;&nbsp; <span>Runtime:</span> {result.runtime ? result.runtime : '-'}</h5>
                                 <h5><span>Premiered:</span> {result.premiered ? result.premiered : '-'}</h5>
-                                {result.schedule.time ? 
-                                    <h5><span>Schedule:</span> {result.schedule.days.join(', ')}s at {result.schedule.time}</h5>
-                                    : <h5><span>Schedule:</span> - </h5>
-                                }
+                                <h5><span>Schedule:</span> {result.schedule.time ? `${result.schedule.days.join(', ')} at ${result.schedule.time}` : '-'}</h5>
                                 <h5><span>Network:</span> {result.network ? result.network.name : '-'}</h5>
                                 <h5><span>Rating: </span> {result.rating.average ? result.rating.average : '-'}</h5>
-                                <h5><span></span></h5>
                             </div>
                         </Col>
                     </Row>
                     <hr/>
                     <Row>
                         <h3>Summary</h3>
-                        <p>{stripHtml(result.summary)}</p>
+                        <p>{result.summary ? stripHtml(result.summary) : 'No summary available.'}</p>
                     </Row>
-                        <Container>
-                            <Row>
+                    <Container>
+                        <Row>
+                            <Col xs='auto'>
+                                <Link to={`/results/${result.id}/episodes`}>Episodes</Link>
+                            </Col>
+                            <Col xs='auto'>
+                                <Link to={`/results/${result.id}/cast`}>Cast</Link>
+                            </Col>
+                            <Col xs='auto'>
+                                <Link to={`/results/${result.id}/crew`}>Crew</Link>
+                            </Col>
+                            {result.officialSite && 
                                 <Col xs='auto'>
-                                    <Link to={`/results/${result.id}/episodes`}>Episodes</Link>
+                                    <a href={result.officialSite}>Official Site</a>
                                 </Col>
-                                <Col xs='auto'>
-                                    <Link to={`/results/${result.id}/cast`}>Cast</Link>
-                                </Col>
-                                <Col xs='auto'>
-                                    <Link to={`/results/${result.id}/crew`}>Crew</Link>
-                                </Col>
-                                {result.officialSite && 
-                                    <Col xs='auto'>
-                                        <a href={result.officialSite}>Official Site</a>
-                                    </Col>
-                                }
-
-                            </Row>
-                        </Container>
-                </Container>
+                            }
+                        </Row>
+                    </Container>
+                </>
             }
             {loading && <Container className='d-flex justify-content-center'><h1>Loading...</h1></Container>}
             {result && result.length < 1 && <Container className='d-flex justify-content-center'><h1>No Results</h1></Container>}
             {error && <Container className='d-flex justify-content-center'><h1>{error}</h1></Container>}
-        </>
+        </Container>
     )
 };
 

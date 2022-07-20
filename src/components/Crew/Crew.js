@@ -23,13 +23,13 @@ const Crew = () => {
     return (
         <Container className='mt-4 mb-4'>
             {result &&
-                <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
+                <Row xs={1} md={2} lg={3} xl={4} className='g-4 contentWrapper'>
                     {result.map((crewMember, index) => <CrewMember key={index} crewMemberInfo={crewMember}/>)}    
                 </Row>
             }
-            {loading && <Container className='d-flex justify-content-center'><h1>Loading...</h1></Container>}
-            {result && result.length < 1 && <Container className='d-flex justify-content-center'><h1>No Results</h1></Container>}
-            {error && <Container className='d-flex justify-content-center'><h1>{error}</h1></Container>}
+            {loading && <Container className='contentWrapper'><h1>Loading...</h1></Container>}
+            {result && result.length < 1 && <Container className='contentWrapper'><h1>No Results</h1></Container>}
+            {error && <Container className='contentWrapper'><h1>{error}</h1></Container>}
         </Container>
     );
 };

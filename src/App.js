@@ -21,8 +21,8 @@ function App() {
   return (
     <>
       <Header />
-      <Container fluid='xs' style={{overflow: 'hidden'}}>
-        <main style={{marginTop: '130px', marginBottom: '30px'}}>
+      <Container fluid='xs' className='appContainer'>
+        <main>
           <FunctionContext.Provider value={stripHtml}>
             <Routes>
               <Route path="/" element={<Home />} />

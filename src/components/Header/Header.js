@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button, Row, Col, Navbar, Image } from 'react-bootstrap';
 import home from '../../images/home.ico'
+import './Header.css'
 
 const Header = () => {
     const [searchString, setSearchString] = useState('')
@@ -18,23 +19,15 @@ const Header = () => {
     }
 
     return (
-        <Navbar fixed='top'
-            style={{
-                background: 'rgb(35,35,35)',
-                minHeight: '100px',
-            }}
-        >
-            <Row xs='2' md='1'
-                className='d-flex align-items-center'
-                style={{width: '100%'}}
-            >
+        <Navbar fixed='top' className='navbar'>
+            <Row xs='2' md='1' className='navRow'>
                 <Col xs={{ span: 2, order: 1 }} md={{ span: 2 }} lg={{ span: 4, order: 0}}>
                     <Link to="/">
-                        <Image src={home} alt='home icon' className='ms-5' style={{height: '40px'}} />
+                        <Image src={home} alt='home icon' className='ms-5 homeImg'/>
                     </Link>
                 </Col>
                 <Col xs={{ span: 12, order: 0 }} md={{ span: 12 }} lg={{ span: 4, order: 1 }}>
-                        <h1 style={{color: 'rgb(200,160,0)', textAlign: 'center'}}>Showcase</h1>
+                        <h1 className='title'>Showcase</h1>
                 </Col>
                 <Col xs={{ span: 10, order: 2 }} md={{ span: 10, order: 2 }} lg={{ span: 4 }}>
                     <Form onSubmit={submitHandler}>
@@ -44,7 +37,7 @@ const Header = () => {
                                     <Form.Control 
                                         type='text'
                                         placeholder='Search for shows'
-                                        style={{height: '2.5em', maxWidth: '232px', background: 'rgb(230, 230, 230)'}}
+                                        className='formInput'
                                         onChange={changeHandler}
                                         value={searchString}
                                     />
@@ -53,7 +46,7 @@ const Header = () => {
                                     <Button 
                                         variant='light' 
                                         type='submit'
-                                        style={{ height: '2.5em', background: 'rgb(55,55,55)', color: 'rgb(200,160,0)', border: 'black' }}
+                                        className='submitBtn'
                                     >Submit</Button>
                                 </Col>
                             </Row>
