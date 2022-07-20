@@ -53,7 +53,7 @@ const Header = () => {
                                     <Button 
                                         variant='light' 
                                         type='submit'
-                                        style={{ height: '2.5em' }}
+                                        style={{ height: '2.5em', background: 'rgb(55,55,55)', color: 'rgb(200,160,0)', border: 'black' }}
                                     >Submit</Button>
                                 </Col>
                             </Row>
