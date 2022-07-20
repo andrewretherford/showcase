@@ -18,6 +18,7 @@ const ShowDetails = () => {
     const { result, loading, error } = apiState
 
     useEffect(() => {
+        dispatch({ type: 'loading' })
         fetch(`https://api.tvmaze.com/shows/${showId}`)
         .then(res => {
             if(res.status === 404) {
@@ -38,7 +39,7 @@ const ShowDetails = () => {
         .catch(err => {
             dispatch({
                 type: 'error',
-                error: 'Oops, something went wrong! Please try again later'
+                error: 'Oops, something went wrong! Please try again later.'
             })
             console.log(err)
         })
