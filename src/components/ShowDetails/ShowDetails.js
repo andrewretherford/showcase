@@ -2,8 +2,8 @@ import { useContext, useReducer, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FunctionContext } from '../../App';
-import noImage from '../../images/no-image.png'
 import { apiResultReducer } from '../../functions/apiResultReducer';
+import noImage from '../../images/no-image.png'
 
 const ShowDetails = () => {
     const initialState = {

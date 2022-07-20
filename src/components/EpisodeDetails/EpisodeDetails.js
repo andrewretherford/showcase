@@ -1,63 +1,82 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { FunctionContext } from '../../App';
+import { apiResultReducer } from '../../functions/apiResultReducer';
 import noImage from '../../images/no-image.png'
 
 const EpisodeDetails = () => {
-    const [episodeDetails, setEpisodeDetails] = useState(null)
+    const initialState = {
+        loading: false,
+        result: null,
+        error: ''
+    }
+
+    const [apiState, dispatch] = useReducer(apiResultReducer, initialState)
     const stripHtml = useContext(FunctionContext)
     const { episodeId } = useParams()
+    const { result, loading, error } = apiState
 
     useEffect(() => {
+        dispatch({ type: 'loading' })
         fetch(`https://api.tvmaze.com/episodes/${episodeId}`)
-            .then(res => res.json())
-            .then(data => {
-                setEpisodeDetails(data)
+        .then(res => {
+            if(res.status === 404) {
+                return dispatch({
+                    type: 'error',
+                    error: `Oops, couldn't find any details for this episode!`
+                })
+            } else if(res.status === 200 || res.status === 304) {
+                return res.json()
+            }
+        })
+        .then(data => {
+            dispatch({
+                type: 'success',
+                data: data
             })
-            .catch(console.error)
+        })
+        .catch(err => {
+            dispatch({
+                type: 'error',
+                error: 'Oops, something went wrong! Please try again later.'
+            })
+            console.log(err)
+        })
     },[episodeId])
 
-    if(!episodeDetails) {
-        return (
-            <Container className='d-flex justify-content-center'>
-                <h1>Loading...</h1>
-            </Container>
-        )
-    } else if(episodeDetails.length < 1) {
-        return (
-            <Container className='d-flex justify-content-center'>
-                <h1>No Results</h1>
-            </Container>
-        )
-    } else {
-        return (
-            <Container className='mt-5 mb-5' style={{background: 'rgb(230,230,230', padding: '30px', border: '2px solid rgb(80,80,80)'}}>
-                <Row className='mb-4 gap-3'>
-                    <Col md='auto'>
-                        {episodeDetails.image ?
-                            <Image src={episodeDetails.image.medium}/>
-                            : <Image style={{width: '250px'}} src={noImage}/>
-                        }
-                    </Col>
-                    <Col md className='d-flex align-items-center'>
-                        <div>
-                            <h2>{episodeDetails.name}</h2>
-                            <h5><span>Air Date:</span> {episodeDetails.airdate ? episodeDetails.airdate : '-'} &nbsp;&nbsp; | &nbsp;&nbsp; <span>Runtime:</span> {episodeDetails.airtime ? episodeDetails.airtime : '-'}</h5>
-                            <h5><span>Season:</span> {episodeDetails.season ? episodeDetails.season : '-'} &nbsp;&nbsp; | &nbsp;&nbsp; <span>Episode:</span> {episodeDetails.number ? episodeDetails.number : '-'}</h5>
-                                <h5><span>Rating: </span> {episodeDetails.rating.average ? episodeDetails.rating.average : '-'}</h5>
-                            <h5><span></span></h5>
-                        </div>
-                    </Col>
-                </Row>
-                <hr/>
-                <Row>
-                    <h3>Summary</h3>
-                    <p>{episodeDetails.summary ? stripHtml(episodeDetails.summary) : 'No summary on file'}</p>
-                </Row>
-            </Container>
-        );
-    }
+    return (
+        <>  {result &&
+                <Container className='mt-5 mb-5' style={{background: 'rgb(230,230,230', padding: '30px', border: '2px solid rgb(80,80,80)'}}>
+                    <Row className='mb-4 gap-3'>
+                        <Col md='auto'>
+                            {result.image ?
+                                <Image src={result.image.medium}/>
+                                : <Image style={{width: '250px'}} src={noImage}/>
+                            }
+                        </Col>
+                        <Col md className='d-flex align-items-center'>
+                            <div>
+                                <h2>{result.name}</h2>
+                                <h5><span>Air Date:</span> {result.airdate ? result.airdate : '-'} &nbsp;&nbsp; | &nbsp;&nbsp; <span>Runtime:</span> {result.airtime ? result.airtime : '-'}</h5>
+                                <h5><span>Season:</span> {result.season ? result.season : '-'} &nbsp;&nbsp; | &nbsp;&nbsp; <span>Episode:</span> {result.number ? result.number : '-'}</h5>
+                                    <h5><span>Rating: </span> {result.rating.average ? result.rating.average : '-'}</h5>
+                                <h5><span></span></h5>
+                            </div>
+                        </Col>
+                    </Row>
+                    <hr/>
+                    <Row>
+                        <h3>Summary</h3>
+                        <p>{result.summary ? stripHtml(result.summary) : 'No summary on file'}</p>
+                    </Row>
+                </Container>
+            }
+            {loading && <Container className='d-flex justify-content-center'><h1>Loading...</h1></Container>}
+            {result && result.length < 1 && <Container className='d-flex justify-content-center'><h1>No Results</h1></Container>}
+            {error && <Container className='d-flex justify-content-center'><h1>{error}</h1></Container>}
+        </>
+    );
 };
 
 export default EpisodeDetails;
