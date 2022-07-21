@@ -1,0 +1,109 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  /* background: rgb(0,100,0,.2); */
+}
+
+:root {
+  --mainGold: rgb(200,160,0);
+  --mutedGold: rgb(145, 125, 0);
+  --darkGrey: rgb(35,35,35);
+  --medGrey: rgb(80, 80, 80);
+  --lightGrey: rgb(215,215,215);
+  --buttonGrey: rgb(55,55,55);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--medGrey);
+}
+
+.appContainer {
+  overflow: hidden;
+}
+
+main {
+  margin-top: 130px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  color: var(--mutedGold);
+}
+
+.displayCard {
+  border-radius: 5px;
+  background: var(--lightGrey);
+  max-width: 360px;
+}
+
+.cardImg {
+  padding-top: 10px;
+  max-height: 380px;
+  max-width: 260px;
+  margin: auto;
+}
+
+.noImg {
+  padding-top: 10px;
+  height: 305px;
+  max-width: 210px;
+  margin: auto;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardText {
+  text-align: justify;
+}
+
+.cardLink {
+  background: var(--darkGrey);
+  color: var(--mainGold);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cardLink:hover {
+  color: var(--mutedGold);
+}
+
+.detailsDisplay {
+  background: var(--lightGrey);
+  border: 1px solid var(--darkGrey);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.infoText {
+  display: flex;
+  justify-content: center;
+  background: var(--lightGrey);
+}
+
+.center {
+  text-align: center;
+}

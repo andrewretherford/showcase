@@ -1,0 +1,45 @@
+.navbar {
+    background: var(--darkGrey);
+    min-height: 100px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.navRow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.homeImg {
+    height: 40px;
+}
+
+.title {
+    color: var(--mainGold);
+    text-align: center;
+}
+
+.formInput {
+    height: 2.5em;
+    max-width: 232px;
+    background: var(--lightGrey);
+}
+
+.submitBtn, .submitBtn:hover {
+    height: 2.5em;
+    background: var(--buttonGrey);
+    color: var(--mainGold);
+    font-weight: bold;
+    border: black;
+}
+
+.submitBtn:focus {
+    height: 2.5em;
+    background: var(--buttonGrey);
+    color: var(--mainGold);
+    font-weight: bold;
+    border: black;
+    outline: none;
+    box-shadow: none;
+}
