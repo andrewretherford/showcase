@@ -2,7 +2,7 @@
 
 ## Description
 
-Showcase allows users to browse TV shows from all over the globe and access information about shows including episodes, cast and crew, air dates and times, networks, and more.  It is built on the TVMaze API and in addition to direct information about shows, contains links to official sites and profiles for cast and crew. Check out the site live at !
+Showcase allows users to browse TV shows from all over the globe and access information about shows including episodes, cast and crew, air dates and times, networks, and more.  It is built on the TVMaze API and in addition to direct information about shows, contains links to official sites and profiles for cast and crew. Check out the <a href='https://showcase-tv-database.netlify.app/'>live site</a> on Netlify!
 
 <img src='./src/images/readme-cover-image.png' alt='showcase homepage' width=800>
 
