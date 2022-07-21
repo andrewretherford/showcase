@@ -29,8 +29,7 @@ export function getData(dispatch, urlAddOn, errorText) {
             .catch(err => {
                 dispatch({
                     type: 'error',
-                    error: 'Oops, something went wrong! Please try again later.'
+                    error: `Oops, something went wrong! Please try again later. Error: ${err}`
                 })
-                console.log(err)
             })
 }
