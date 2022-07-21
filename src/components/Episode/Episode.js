@@ -10,7 +10,8 @@ const Episode = ({ episode }) => {
     return (
         <Card className='displayCard'>
             <Card.Img variant='top' src={episode.image ? episode.image.medium : noImage} alt='episode cover image' className='cardImg'/>
-            <Card.Body>                  
+            <Card.Body className='cardBody'>
+                <div>                 
                     <Card.Title>{episode.name}</Card.Title>
                     {episode.summary ? 
                         <Card.Text className='cardText'>
@@ -20,8 +21,11 @@ const Episode = ({ episode }) => {
                             }
                         </Card.Text>
                         : <p>No Summary</p>
-                    }               
+                    }
+                </div> 
+                <div className='mt-2'>
                     <Link to={`${episode.id}`} className='cardLink'>Details</Link>
+                </div>               
             </Card.Body>
         </Card>
     );

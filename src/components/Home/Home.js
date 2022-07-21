@@ -28,9 +28,10 @@ const Home = () => {
                     {result.map((show, index) => {
                         return (
                             <Card key={index} className='displayCard'>
-                                <Card.Img variant='top' src={show.image ? show.image.medium : noImage} className='cardImg'/>
-                                <Card.Body>                  
-                                    <Card.Title>{show.name}</Card.Title>
+                                <Card.Img variant='top' src={show.image ? show.image.medium : noImage} alt='show cover image' className='cardImg'/>
+                                <Card.Body className='cardBody'>
+                                    <div>
+                                        <Card.Title>{show.name}</Card.Title>
                                         {show.summary ? 
                                             <Card.Text className='cardText'>
                                                 {show.summary.length > 200 ?
@@ -39,17 +40,20 @@ const Home = () => {
                                                 }
                                             </Card.Text>
                                             : <p>No Summary</p>
-                                        }                    
-                                    <Link to={`/results/${show.id}/details`} className='cardLink'>Details</Link>
+                                        }
+                                    </div>                  
+                                    <div className='mt-2'>
+                                        <Link to={`/results/${show.id}/details`} className='cardLink'>Details</Link>
+                                    </div>                   
                                 </Card.Body>
                             </Card>
                         )
                     })}
                 </Row>
             }
-            {loading && <Container className='contentWrapper'><h1>Loading...</h1></Container>}
-            {result && result.length < 1 && <Container className='contentWrapper'><h1>No Results</h1></Container>}
-            {error && <Container className='contentWrapper'><h1>{error}</h1></Container>}
+            {loading && <Container className='infoText'><h1>Loading...</h1></Container>}
+            {result && result.length < 1 && <Container className='infoText'><h1>No Results</h1></Container>}
+            {error && <Container className='infoText'><h1>{error}</h1></Container>}
         </Container>
     );
 };

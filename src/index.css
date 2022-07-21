@@ -9,7 +9,7 @@
   --mutedGold: rgb(145, 125, 0);
   --darkGrey: rgb(35,35,35);
   --medGrey: rgb(80, 80, 80);
-  --lightGrey: rgb(230,230,230);
+  --lightGrey: rgb(215,215,215);
   --buttonGrey: rgb(55,55,55);
 }
 
@@ -42,14 +42,29 @@ span {
 }
 
 .displayCard {
-  border-radius: 1;
+  border-radius: 5px;
   background: var(--lightGrey);
   max-width: 360px;
 }
 
 .cardImg {
-  border-radius: 0;
   padding-top: 10px;
+  max-height: 380px;
+  max-width: 260px;
+  margin: auto;
+}
+
+.noImg {
+  padding-top: 10px;
+  height: 305px;
+  max-width: 210px;
+  margin: auto;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardText {
@@ -57,13 +72,25 @@ span {
 }
 
 .cardLink {
+  background: var(--darkGrey);
+  color: var(--mainGold);
+  text-align: center;
   text-decoration: none;
+  display: block;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cardLink:hover {
+  color: var(--mutedGold);
 }
 
 .detailsDisplay {
   background: var(--lightGrey);
   border: 1px solid var(--darkGrey);
   padding: 30px;
+  border-radius: 5px;
 }
 
 .contentWrapper {
@@ -71,13 +98,12 @@ span {
   justify-content: center;
 }
 
-.imgContainer {
+.infoText {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 300px;
+  background: var(--lightGrey);
 }
 
-.image {
-  width: 210px;
+.center {
+  text-align: center;
 }

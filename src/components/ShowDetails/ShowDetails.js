@@ -51,26 +51,26 @@ const ShowDetails = () => {
                     <Container>
                         <Row>
                             <Col xs='auto'>
-                                <Link to={`/results/${result.id}/episodes`}>Episodes</Link>
+                                <Link to={`/results/${result.id}/episodes`} className='cardLink'>Episodes</Link>
                             </Col>
                             <Col xs='auto'>
-                                <Link to={`/results/${result.id}/cast`}>Cast</Link>
+                                <Link to={`/results/${result.id}/cast`} className='cardLink'>Cast</Link>
                             </Col>
                             <Col xs='auto'>
-                                <Link to={`/results/${result.id}/crew`}>Crew</Link>
+                                <Link to={`/results/${result.id}/crew`} className='cardLink'>Crew</Link>
                             </Col>
                             {result.officialSite && 
                                 <Col xs='auto'>
-                                    <a href={result.officialSite}>Official Site</a>
+                                    <a href={result.officialSite} className='cardLink'>Official Site</a>
                                 </Col>
                             }
                         </Row>
                     </Container>
                 </>
             }
-            {loading && <Container className='d-flex justify-content-center'><h1>Loading...</h1></Container>}
-            {result && result.length < 1 && <Container className='d-flex justify-content-center'><h1>No Results</h1></Container>}
-            {error && <Container className='d-flex justify-content-center'><h1>{error}</h1></Container>}
+            {loading && <Container className='infoText'><h1>Loading...</h1></Container>}
+            {result && result.length < 1 && <Container className='infoText'><h1>No Results</h1></Container>}
+            {error && <Container className='infoText'><h1>{error}</h1></Container>}
         </Container>
     )
 };

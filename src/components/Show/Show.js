@@ -10,7 +10,8 @@ const Show = ({ showInfo }) => {
     return (
         <Card className='displayCard'>
             <Card.Img variant='top' src={show.image.medium ? show.image.medium : noImage} alt='show cover image' className='cardImg'/>
-            <Card.Body>                  
+            <Card.Body className='cardBody'>     
+                <div>             
                     <Card.Title>{show.name}</Card.Title>
                     {show.summary ? 
                         <Card.Text className='cardText'>
@@ -20,8 +21,11 @@ const Show = ({ showInfo }) => {
                             }
                         </Card.Text>
                         : <p>No Summary</p>
-                    }                  
+                    }
+                </div>   
+                <div className='mt-2'>
                     <Link to={`/results/${show.id}/details`} className='cardLink'>Details</Link>
+                </div>               
             </Card.Body>
         </Card>
     );

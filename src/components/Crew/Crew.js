@@ -27,9 +27,9 @@ const Crew = () => {
                     {result.map((crewMember, index) => <CrewMember key={index} crewMemberInfo={crewMember}/>)}    
                 </Row>
             }
-            {loading && <Container className='contentWrapper'><h1>Loading...</h1></Container>}
-            {result && result.length < 1 && <Container className='contentWrapper'><h1>No Results</h1></Container>}
-            {error && <Container className='contentWrapper'><h1>{error}</h1></Container>}
+            {loading && <Container className='infoText'><h1>Loading...</h1></Container>}
+            {result && result.length < 1 && <Container className='infoText'><h1>No Results</h1></Container>}
+            {error && <Container className='infoText'><h1>{error}</h1></Container>}
         </Container>
     );
 };
