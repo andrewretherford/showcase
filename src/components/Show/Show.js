@@ -9,7 +9,7 @@ const Show = ({ showInfo }) => {
     const stripHtml = useContext(FunctionContext)
     return (
         <Card className='displayCard'>
-            <Card.Img variant='top' src={show.image.medium ? show.image.medium : noImage} alt='show cover image' className='cardImg'/>
+            <Card.Img variant='top' src={show.image ? show.image.medium : noImage} alt='show cover image' className='cardImg'/>
             <Card.Body className='cardBody'>     
                 <div>             
                     <Card.Title>{show.name}</Card.Title>
